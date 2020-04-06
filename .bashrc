@@ -8,6 +8,7 @@
 alias ls='ls --color=auto'
 alias free='free -h'
 alias df='df -h'
+alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # PS1='[\u@\h \W]\$ '
 export HISTCONTROL=ignoreboth:erasedups
