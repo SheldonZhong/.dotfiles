@@ -1,6 +1,9 @@
 unlet! skip_defaults_vim
 source $VIMRUNTIME/defaults.vim
 
+set ignorecase
+set smartcase
+
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
 command -nargs=0 -bar Update if &modified 
