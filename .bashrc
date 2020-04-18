@@ -10,6 +10,16 @@ alias free='free -h'
 alias df='df -h'
 alias du='du -h'
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+# bash
+# No ttyctl, so we need to save and then restore terminal settings
+vim()
+{
+    # osx users, use stty -g
+    local STTYOPTS="$(stty --save)"
+    stty stop '' -ixoff
+    command vim "$@"
+    stty "$STTYOPTS"
+}
 
 # PS1='[\u@\h \W]\$ '
 export HISTCONTROL=ignoreboth:erasedups
