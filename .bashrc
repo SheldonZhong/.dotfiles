@@ -6,11 +6,21 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
+alias la='ls --color=auto -a'
+alias ll='ls --color=auto -l'
+alias lt='ls --color=auto -ltr'
+alias ldot='ls --color=auto -ld .?*'
+
 alias free='free -h'
 alias df='df -h'
 alias du='du -h'
+
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-# bash
+
+# tools
+alias valgrind='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
+
+# bash only: disable bash's Ctrl+S in vim
 # No ttyctl, so we need to save and then restore terminal settings
 vim()
 {
