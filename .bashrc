@@ -46,5 +46,11 @@ function __nonzero_return() {
 	[ $RETVAL -ne 0 ] && echo "[$RETVAL]"
 }
 
-export PROMPT_COMMAND='__git_ps1 "$(tput setaf 6)[\\d \\t] $(tput bold)$(tput setaf 2)\\u@\\h$(tput setaf 7):$(tput setaf 3)\\w$(tput sgr0)" "$(tput setaf 1)\`__nonzero_return\`$(tput setaf 7)\n\\$ "'
+__BLUE__=$(tput setaf 6)
+__BOLD__=$(tput bold)
+__GREEN__=$(tput setaf 2)
+__COLOR__OFF__=$(tput sgr0)
+__YELLOW__=$(tput setaf 3)
+__RED__=$(tput setaf 1)
+export PROMPT_COMMAND='__git_ps1 "${__BLUE__}[\\d \\t] ${__BOLD__}${__GREEN__}\\u@\\h${__COLOR__OFF__}${__BOLD__}:${__YELLOW__}\\w${__COLOR__OFF__}" "${__RED__}${__BOLD__}\`__nonzero_return\`${__COLOR__OFF__}\n\\$ "'
 
