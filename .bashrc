@@ -16,6 +16,7 @@ alias df='df -h'
 alias du='du -h'
 
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias onedrive='docker logs onedrive | tail -n 20'
 
 # tools
 alias valgrind='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
