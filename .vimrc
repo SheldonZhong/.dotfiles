@@ -3,6 +3,13 @@ source $VIMRUNTIME/defaults.vim
 
 set ignorecase
 set smartcase
+set number
+set hlsearch
+" seems useless...
+" set incsearch
+
+" set expandtab
+"
 
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
