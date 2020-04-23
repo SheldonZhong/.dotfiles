@@ -7,8 +7,8 @@
 
 alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
-alias ll='ls --color=auto -l'
-alias lt='ls --color=auto -ltr'
+alias ll='ls --color=auto -lh'
+alias lt='ls --color=auto -ltrh'
 alias ldot='ls --color=auto -ld .?*'
 
 alias free='free -h'
