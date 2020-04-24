@@ -8,8 +8,10 @@ set hlsearch
 " seems useless...
 " set incsearch
 
-" set expandtab
-"
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
