@@ -15,6 +15,9 @@ alias free='free -h'
 alias df='df -h'
 alias du='du -h'
 
+alias sudo='sudo '
+alias hibernate='systemctl hibernate'
+
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias onedrive='docker logs onedrive | tail -n 20'
 
