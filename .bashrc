@@ -64,7 +64,7 @@ fi
 function custom_prompt() {
   __git_ps1 "${__BLUE__}[\\d \\t] ${__BOLD__}${__GREEN__}\\u@\\h${__COLOR__OFF__}${__BOLD__}:${__YELLOW__}\\w${__COLOR__OFF__}" "${__RED__}${__BOLD__}\`__nonzero_return\`${__COLOR__OFF__}\n\\$ "
 
-  VTE_PWD_THING="$(__vte_osc7)"
+  type __vte_osc7 >/dev/null 2>&1 && VTE_PWD_THING="$(__vte_osc7)"
   PS1="$PS1$VTE_PWD_THING"
 }
 
