@@ -56,5 +56,10 @@ __GREEN__=$(tput setaf 2)
 __COLOR__OFF__=$(tput sgr0)
 __YELLOW__=$(tput setaf 3)
 __RED__=$(tput setaf 1)
-export PROMPT_COMMAND='__git_ps1 "${__BLUE__}[\\d \\t] ${__BOLD__}${__GREEN__}\\u@\\h${__COLOR__OFF__}${__BOLD__}:${__YELLOW__}\\w${__COLOR__OFF__}" "${__RED__}${__BOLD__}\`__nonzero_return\`${__COLOR__OFF__}\n\\$ "'
-
+source /etc/profile.d/vte.sh
+function custom_prompt() {
+  __git_ps1 "${__BLUE__}[\\d \\t] ${__BOLD__}${__GREEN__}\\u@\\h${__COLOR__OFF__}${__BOLD__}:${__YELLOW__}\\w${__COLOR__OFF__}" "${__RED__}${__BOLD__}\`__nonzero_return\`${__COLOR__OFF__}\n\\$ "
+  VTE_PWD_THING="$(__vte_osc7)"
+  PS1="$PS1$VTE_PWD_THING"
+}
+PROMPT_COMMAND=custom_prompt
