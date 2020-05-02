@@ -9,7 +9,7 @@ alias ls='ls --color=auto'
 alias la='ls --color=auto -a'
 alias ll='ls --color=auto -lh'
 alias lt='ls --color=auto -ltrh'
-alias ldot='ls --color=auto -ld .?*'
+alias ldot='ls --color=auto -lhd .?*'
 
 alias free='free -h'
 alias df='df -h'
