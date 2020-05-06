@@ -6,8 +6,8 @@
 [[ $- != *i* ]] && return
 
 alias ls='ls --color=auto'
-alias la='ls --color=auto -a'
-alias ll='ls --color=auto -lh'
+alias la='ls --color=auto -A'
+alias ll='ls --color=auto -alFh'
 alias lt='ls --color=auto -ltrh'
 alias ldot='ls --color=auto -lhd .?*'
 
