@@ -21,7 +21,8 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-" Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-fugitive'
+Plugin 'airblade/vim-gitgutter'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
@@ -58,6 +59,7 @@ filetype plugin indent on    " required
 let g:ycm_clangd_binary_path = "/usr/bin/clangd"
 
 let g:airline_powerline_fonts = 1
+highlight! link SignColumn LineNr
 
 " ctrlp seems working without explicit map
 " let g:ctrlp_map = '<c-p>'
@@ -66,9 +68,12 @@ let g:airline_powerline_fonts = 1
 set ignorecase
 set smartcase
 set number
+set relativenumber
 set hlsearch
 " been set in defaults.vim
 " set incsearch
+"
+set shortmess-=S
 
 " rendering whitespace
 " set listchars=tab:>·,trail:~,extends:>,precedes:<,space:·
