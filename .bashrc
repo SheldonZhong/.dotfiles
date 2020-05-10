@@ -13,7 +13,7 @@ alias ldot='ls --color=auto -lhd .?*'
 
 alias free='free -h'
 alias df='df -h'
-alias du='du -h'
+alias du='du -sh'
 
 alias sudo='sudo '
 alias hibernate='systemctl hibernate'
