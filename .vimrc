@@ -64,6 +64,7 @@ highlight! link SignColumn LineNr
 " ctrlp seems working without explicit map
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_extensions = ['tag']
 
 set ignorecase
 set smartcase
