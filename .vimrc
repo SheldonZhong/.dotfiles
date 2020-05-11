@@ -85,6 +85,15 @@ set softtabstop=2
 set shiftwidth=2
 set laststatus=2
 
+" auto closing brackets
+inoremap " ""<left>
+inoremap ' ''<left>
+inoremap ( ()<left>
+inoremap [ []<left>
+inoremap { {}<left>
+inoremap {<CR> {<CR>}<ESC>O
+inoremap {;<CR> {<CR>};<ESC>O
+
 " use Ctrl + S to save in normal mode
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
