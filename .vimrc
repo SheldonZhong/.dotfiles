@@ -86,6 +86,16 @@ set softtabstop=2
 set shiftwidth=2
 set laststatus=2
 
+nnoremap <C-[> :GtagsCursor<CR>
+
+nnoremap <C-H> <C-W>h
+nnoremap <C-J> <C-W>j
+nnoremap <C-K> <C-W>k
+nnoremap <C-L> <C-W>l
+
+" jump out of brackets using Ctrl-E
+inoremap <C-E> <C-o>A
+
 " auto closing brackets
 inoremap " ""<left>
 inoremap ' ''<left>
@@ -106,3 +116,5 @@ command -nargs=0 -bar Update if &modified
                            \|    endif
                            \|endif
 nnoremap <silent> <C-S> :<C-u>Update<CR>
+" Use Ctrl +S to save in insert mode
+inoremap <C-S> <ESC>:<C-u>Update<CR>
