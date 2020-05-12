@@ -89,8 +89,8 @@ set shiftwidth=2
 " always show status
 set laststatus=2
 
-" Gtags shortcut, it collides with <ESC>
-nnoremap <C-[> :GtagsCursor<CR>
+" Gtags shortcut
+nnoremap <C-\> :GtagsCursor<CR>
 
 " more convenient windows navigation
 nnoremap <C-H> <C-W>h
@@ -110,7 +110,7 @@ inoremap '' '
 inoremap ( ()<left>
 inoremap (( (
 inoremap [ []<left>
-inoremap [[ ]
+inoremap [[ [
 inoremap { {}<left>
 inoremap {{ {
 inoremap {<CR> {<CR>}<C-O>O
