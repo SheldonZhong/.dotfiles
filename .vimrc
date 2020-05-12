@@ -72,8 +72,9 @@ set number
 set relativenumber
 set hlsearch
 " been set in defaults.vim
-" set incsearch
-"
+set incsearch
+
+" show search count
 set shortmess-=S
 
 " rendering whitespace
@@ -84,26 +85,35 @@ set expandtab
 set tabstop=2
 set softtabstop=2
 set shiftwidth=2
+
+" always show status
 set laststatus=2
 
+" Gtags shortcut, it collides with <ESC>
 nnoremap <C-[> :GtagsCursor<CR>
 
+" more convenient windows navigation
 nnoremap <C-H> <C-W>h
 nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
-" jump out of brackets using Ctrl-E
-inoremap <C-E> <C-o>A
+" jump out of brackets (for the most time) using <Ctrl-E>
+inoremap <C-E> <C-O>A
 
-" auto closing brackets
+set timeoutlen=500
+" auto closing brackets, repeat key to type one character
 inoremap " ""<left>
+inoremap "" "
 inoremap ' ''<left>
+inoremap '' '
 inoremap ( ()<left>
+inoremap (( (
 inoremap [ []<left>
+inoremap [[ ]
 inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
-inoremap {;<CR> {<CR>};<ESC>O
+inoremap {{ {
+inoremap {<CR> {<CR>}<C-O>O
 
 " use Ctrl + S to save in normal mode
 " If the current buffer has never been saved, it will have no name,
@@ -116,5 +126,6 @@ command -nargs=0 -bar Update if &modified
                            \|    endif
                            \|endif
 nnoremap <silent> <C-S> :<C-u>Update<CR>
+
 " Use Ctrl +S to save in insert mode
 inoremap <C-S> <ESC>:<C-u>Update<CR>
