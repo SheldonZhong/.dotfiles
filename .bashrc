@@ -46,8 +46,8 @@ source ~/.git-prompt.sh
 # export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 
 function __nonzero_return() {
-	RETVAL=$?
-	[ $RETVAL -ne 0 ] && echo "[$RETVAL]"
+  RETVAL=$?
+  [ $RETVAL -ne 0 ] && echo "[$RETVAL]"
 }
 
 __BLUE__=$(tput setaf 6)
