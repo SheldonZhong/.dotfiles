@@ -27,6 +27,7 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
+Plugin 'jiangmiao/auto-pairs'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -100,20 +101,6 @@ nnoremap <C-L> <C-W>l
 
 " jump out of brackets (for the most time) using <Ctrl-E>
 inoremap <C-E> <C-O>A
-
-set timeoutlen=500
-" auto closing brackets, repeat key to type one character
-inoremap " ""<left>
-inoremap "" "
-inoremap ' ''<left>
-inoremap '' '
-inoremap ( ()<left>
-inoremap (( (
-inoremap [ []<left>
-inoremap [[ [
-inoremap { {}<left>
-inoremap {{ {
-inoremap {<CR> {<CR>}<C-O>O
 
 " use Ctrl + S to save in normal mode
 " If the current buffer has never been saved, it will have no name,
