@@ -24,6 +24,8 @@ alias onedrive='docker logs onedrive | tail -n 20'
 # tools
 alias valgrind='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
 
+export EDITOR=vim
+
 # bash only: disable bash's Ctrl+S in vim
 # No ttyctl, so we need to save and then restore terminal settings
 vim()
