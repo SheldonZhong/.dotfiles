@@ -90,6 +90,15 @@ set shiftwidth=2
 " always show status
 set laststatus=2
 
+" automatically close preview
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" don't automatically popup YCM doc
+let g:ycm_auto_hover = ''
+
+" toggle YCM documentation
+nmap <leader>D <plug>(YCMHover)
+
 " Gtags shortcut
 nnoremap <C-\> :GtagsCursor<CR>
 
