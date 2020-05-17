@@ -25,7 +25,6 @@ unbind l
 
 unbind C-h
 unbind C-l
-unbind Tab
 bind -r n next-window
 bind -r p previous-window
 bind l last-window
