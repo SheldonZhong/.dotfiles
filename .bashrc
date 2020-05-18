@@ -15,6 +15,8 @@ alias free='free -h'
 alias df='df -h'
 alias du='du -sh'
 
+alias watch='watch '
+
 alias sudo='sudo '
 alias hibernate='systemctl hibernate'
 
