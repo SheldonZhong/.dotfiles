@@ -62,6 +62,9 @@ let g:ycm_clangd_binary_path = "/usr/bin/clangd"
 let g:airline_powerline_fonts = 1
 highlight! link SignColumn LineNr
 
+" show buffer at the top
+let g:airline#extensions#tabline#enabled = 1
+
 " ctrlp seems working without explicit map
 " let g:ctrlp_map = '<c-p>'
 " let g:ctrlp_cmd = 'CtrlP'
