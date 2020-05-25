@@ -75,6 +75,7 @@ set smartcase
 set number
 set relativenumber
 set hlsearch
+set autoread
 " been set in defaults.vim
 set incsearch
 
