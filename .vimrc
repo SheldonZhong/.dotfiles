@@ -28,6 +28,7 @@ Plugin 'preservim/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'lervag/vimtex'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -99,6 +100,9 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 
 " don't automatically popup YCM doc
 let g:ycm_auto_hover = ''
+
+" default vimtex viewer
+let g:vimtex_view_method='zathura'
 
 " toggle YCM documentation
 nmap <leader>D <plug>(YCMHover)
