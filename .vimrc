@@ -79,6 +79,7 @@ set hlsearch
 set autoread
 " been set in defaults.vim
 set incsearch
+set linebreak
 
 " show search count
 set shortmess-=S
@@ -103,6 +104,7 @@ let g:ycm_auto_hover = ''
 
 " default vimtex viewer
 let g:vimtex_view_method='zathura'
+let g:vimtex_view_forward_search_on_start=0
 
 " toggle YCM documentation
 nmap <leader>D <plug>(YCMHover)
