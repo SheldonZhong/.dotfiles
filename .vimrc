@@ -103,7 +103,8 @@ let g:ycm_autoclose_preview_window_after_completion = 1
 let g:ycm_auto_hover = ''
 
 " default vimtex viewer
-let g:vimtex_view_method='zathura'
+" evince is better than zathura on wayland
+" let g:vimtex_view_method='zathura'
 let g:vimtex_view_forward_search_on_start=0
 
 " toggle YCM documentation
