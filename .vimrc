@@ -29,6 +29,7 @@ Plugin 'ycm-core/YouCompleteMe'
 Plugin 'vim-airline/vim-airline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'lervag/vimtex'
+Plugin 'JamshedVesuna/vim-markdown-preview'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
@@ -96,6 +97,11 @@ set shiftwidth=2
 " always show status
 set laststatus=2
 
+" markdown preview
+let vim_markdown_preview_hotkey='<C-m>'
+let vim_markdown_preview_use_xdg_open=1
+let vim_markdown_preview_perl=1
+
 " automatically close preview
 let g:ycm_autoclose_preview_window_after_completion = 1
 
@@ -106,6 +112,8 @@ let g:ycm_auto_hover = ''
 " evince is better than zathura on wayland
 " let g:vimtex_view_method='zathura'
 let g:vimtex_view_forward_search_on_start=0
+" ignore warnings
+" let g:vimtex_quickfix_open_on_warning = 0
 
 " toggle YCM documentation
 nmap <leader>D <plug>(YCMHover)
@@ -125,7 +133,7 @@ inoremap <C-E> <C-O>A
 " use Ctrl + S to save in normal mode
 " If the current buffer has never been saved, it will have no name,
 " call the file browser to save it, otherwise just save it.
-command -nargs=0 -bar Update if &modified 
+command -nargs=0 -bar Update if &modified
                            \|    if empty(bufname('%'))
                            \|        browse confirm write
                            \|    else
