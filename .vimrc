@@ -113,7 +113,8 @@ let g:ycm_auto_hover = ''
 " let g:vimtex_view_method='zathura'
 let g:vimtex_view_forward_search_on_start=0
 " ignore warnings
-" let g:vimtex_quickfix_open_on_warning = 0
+" :copen/cclose to show/supress the warnings
+let g:vimtex_quickfix_open_on_warning = 0
 
 " toggle YCM documentation
 nmap <leader>D <plug>(YCMHover)
