@@ -116,6 +116,9 @@ let g:vimtex_view_forward_search_on_start=0
 " :copen/cclose to show/supress the warnings
 let g:vimtex_quickfix_open_on_warning = 0
 
+" default if vim can't guess correctly
+let g:tex_flavor='latex'
+
 " toggle YCM documentation
 nmap <leader>D <plug>(YCMHover)
 
