@@ -11,6 +11,10 @@ alias ll='ls --color=auto -alFh'
 alias lt='ls --color=auto -ltrh'
 alias ldot='ls --color=auto -lhd .?*'
 
+alias grep='grep --color'
+alias fgrep='fgrep --color'
+alias egrep='egrep --color'
+
 alias free='free -h'
 alias df='df -h'
 alias du='du -sh'
