@@ -19,6 +19,9 @@ alias free='free -h'
 alias df='df -h'
 alias du='du -sh'
 
+# better be careful
+alias rm='rm -i'
+
 alias watch='watch '
 
 alias sudo='sudo '
