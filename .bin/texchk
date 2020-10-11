@@ -13,7 +13,6 @@ if [[ ! -x $(which textidote 2>/dev/null) ]]; then
   exit 1
 fi
 
-rm -f .report.html
 tmphtml="$(mktemp --suffix ".html")"
 
 textidote --check en --output html $1 > $tmphtml
