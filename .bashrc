@@ -88,3 +88,5 @@ fi
 if [ -f /usr/share/fzf/key-bindings.bash ]; then
     source /usr/share/fzf/completion.bash
 fi
+
+export PATH="$HOME/.bin:$PATH"

@@ -1,0 +1,27 @@
+#!/bin/bash
+# https://github.com/sylvainhalle/textidote
+# AUR package: textidote-bin
+
+if [[ $# -lt 1 ]]; then
+  echo "Usage:"
+  echo "  texchk <*.tex>"
+  exit 1
+fi
+
+if [[ ! -x $(which textidote 2>/dev/null) ]]; then
+  echo "texidote not found in path"
+  exit 1
+fi
+
+rm -f .report.html
+tmphtml="$(mktemp --suffix ".html")"
+
+textidote --check en --output html $1 > $tmphtml
+
+if [[ $? -eq 255 ]]; then
+  rm -f $tmphtml
+  exit 255
+else
+  xdg-open $tmphtml
+fi
+
