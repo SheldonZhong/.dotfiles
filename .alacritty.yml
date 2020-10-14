@@ -21,6 +21,9 @@ window:
     columns: 80
     lines: 24
 
+  # Allow terminal applications to change Alacritty's window title.
+  dynamic_title: true
+
   # Window position (changes require restart)
   #
   # Specified in number of pixels.
@@ -309,13 +312,11 @@ bell:
 background_opacity: 0.95
 
 selection:
+  # This string contains all characters that are used as separators for "semantic words" in Alacritty.
   semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
 
   # When set to `true`, selected text will be copied to the primary clipboard.
   save_to_clipboard: true
-
-# Allow terminal applications to change Alacritty's window title.
-#dynamic_title: true
 
 #cursor:
   # Cursor style
