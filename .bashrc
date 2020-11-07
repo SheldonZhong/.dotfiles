@@ -36,6 +36,8 @@ alias valgrind='valgrind --leak-check=full --show-leak-kinds=all --track-origins
 alias wl-copy='wl-copy --trim-newline'
 alias wl-paste='wl-paste --no-newline'
 
+alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
+
 export EDITOR=vim
 
 # bash only: disable bash's Ctrl+S in vim
