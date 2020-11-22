@@ -1,0 +1,9 @@
+#!/bin/bash
+if [[ $# -eq 0 ]]; then
+  echo "  Usage: svg2pdf <svg-file> ..."
+fi
+for svg in "$@"; do
+  echo ${svg}
+  fn=${svg%.svg}
+  inkscape -D -o ${fn}.pdf ${svg}
+done
