@@ -6,7 +6,6 @@ set mark-symlinked-directories on
 set show-all-if-ambiguous on
 set show-all-if-unmodified on
 set visible-stats on
-set completion-prefix-display-length 3
 set menu-complete-display-prefix on
 set colored-completion-prefix on
 
