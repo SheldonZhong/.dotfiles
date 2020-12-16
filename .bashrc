@@ -94,8 +94,4 @@ if [ -f /usr/share/fzf/key-bindings.bash ]; then
     source /usr/share/fzf/completion.bash
 fi
 
-for file in $HOME/.bash_completion/* ; do
-  source "$file"
-done
-
 export PATH="$HOME/.bin:$PATH"
