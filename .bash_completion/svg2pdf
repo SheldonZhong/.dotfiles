@@ -1,19 +1,19 @@
 _comp_svg2pdf()
 {
   local IFS=$'\n'
-	local LASTCHAR=' '
+  local LASTCHAR=' '
 
-	COMPREPLY=($(compgen -o plusdirs -f -X '!*.svg' \
+  COMPREPLY=($(compgen -o plusdirs -f -X '!*.svg' \
         -- "${COMP_WORDS[COMP_CWORD]}"))
 
-	if [ ${#COMPREPLY[@]} = 1 ]; then
+  if [ ${#COMPREPLY[@]} = 1 ]; then
     [ -d "$COMPREPLY" ] && LASTCHAR=/
     COMPREPLY=$(printf %q%s "$COMPREPLY" "$LASTCHAR")
-	else
+  else
     for ((i=0; i < ${#COMPREPLY[@]}; i++)); do
       [ -d "${COMPREPLY[$i]}" ] && COMPREPLY[$i]=${COMPREPLY[$i]}/
     done
-	fi
+  fi
 
   return 0
 } &&
