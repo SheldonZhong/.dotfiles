@@ -19,6 +19,8 @@ alias free='free -h'
 alias df='df -h'
 alias du='du -sh'
 
+alias remake='make -B'
+
 # better be careful
 alias rm='rm -i'
 
@@ -95,3 +97,6 @@ if [ -f /usr/share/fzf/key-bindings.bash ]; then
 fi
 
 export PATH="$HOME/.bin:$PATH"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
