@@ -74,6 +74,7 @@ let g:ctrlp_extensions = ['tag']
 
 set ignorecase
 set smartcase
+set wildignorecase
 set number
 set relativenumber
 set hlsearch
