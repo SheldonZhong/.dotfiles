@@ -133,6 +133,9 @@ nnoremap <C-J> <C-W>j
 nnoremap <C-K> <C-W>k
 nnoremap <C-L> <C-W>l
 
+" avoid typing ENTER after reading man page
+nnoremap K K<CR>
+
 " jump out of brackets (for the most time) using <Ctrl-E>
 inoremap <C-E> <C-O>A
 
