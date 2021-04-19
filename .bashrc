@@ -15,11 +15,17 @@ alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias egrep='egrep --color'
 
+alias ip='ip -color=auto'
+
+alias diff='diff --color=auto'
+
 alias free='free -h'
 alias df='df -h'
 alias du='du -sh'
 
 alias remake='make -B'
+
+alias latexmk='latexmk -pdf'
 
 # better be careful
 alias rm='rm -i'
