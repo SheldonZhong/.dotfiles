@@ -123,6 +123,7 @@ let g:tex_flavor='latex'
 " toggle YCM documentation
 nmap <leader>D <plug>(YCMHover)
 nmap ,d :b#<bar>bd#<CR>
+set nostartofline
 
 " Gtags shortcut
 nnoremap <C-\> :GtagsCursor<CR>
