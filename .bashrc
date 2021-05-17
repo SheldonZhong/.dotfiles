@@ -46,6 +46,8 @@ alias wl-paste='wl-paste --no-newline'
 
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
 
+alias tags='ctags -R; gtags'
+
 export EDITOR=vim
 
 # bash only: disable bash's Ctrl+S in vim
