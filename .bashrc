@@ -48,6 +48,8 @@ alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
 
 alias tags='ctags -R; gtags'
 
+alias glow='glow -p'
+
 export EDITOR=vim
 
 # bash only: disable bash's Ctrl+S in vim
