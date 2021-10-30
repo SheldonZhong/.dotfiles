@@ -50,6 +50,9 @@ alias tags='ctags -R; gtags'
 
 alias glow='glow -p'
 
+# attach to debug port
+alias gda='sudo -Hi gdb -p'
+
 export EDITOR=vim
 
 # bash only: disable bash's Ctrl+S in vim
