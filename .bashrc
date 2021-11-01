@@ -15,7 +15,7 @@ alias grep='grep --color'
 alias fgrep='fgrep --color'
 alias egrep='egrep --color'
 
-alias ip='ip -color=auto'
+alias ip='ip -color'
 
 alias diff='diff --color=auto'
 
