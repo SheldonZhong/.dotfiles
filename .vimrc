@@ -72,6 +72,8 @@ set shiftwidth=2
 " always show status
 set laststatus=2
 
+set background=dark
+
 " markdown preview
 let vim_markdown_preview_hotkey='<C-m>'
 let vim_markdown_preview_use_xdg_open=1
