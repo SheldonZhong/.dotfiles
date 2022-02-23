@@ -32,7 +32,7 @@ alias rm='rm -i'
 
 alias watch='watch '
 
-alias sudo='sudo '
+alias sudo='sudo -E'
 alias hibernate='systemctl hibernate'
 
 alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
