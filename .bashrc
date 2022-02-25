@@ -51,7 +51,7 @@ alias tags='ctags -R; gtags'
 alias glow='glow -p'
 
 # attach to debug port
-alias gda='sudo -Hi gdb -p'
+alias gda='sudo -H gdb -p'
 
 export EDITOR=vim
 
