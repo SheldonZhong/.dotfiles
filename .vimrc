@@ -131,4 +131,4 @@ nnoremap <silent> <C-S> :<C-u>Update<CR>
 " Use Ctrl +S to save in insert mode
 inoremap <C-S> <ESC>:<C-u>Update<CR>
 
-set clipboard=unnamedplus
+set clipboard^=unnamed,unnamedplus
