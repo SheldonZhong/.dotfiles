@@ -9,5 +9,5 @@ set visible-stats on
 set menu-complete-display-prefix on
 set colored-completion-prefix on
 
-TAB: menu-complete
+#TAB: menu-complete
 "\e[Z": menu-complete-backward
