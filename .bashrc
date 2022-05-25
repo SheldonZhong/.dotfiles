@@ -60,7 +60,11 @@ export EDITOR=vim
 vim()
 {
     # osx users, use stty -g
-    local STTYOPTS="$(stty --save)"
+    if [[ $OSTYPE == "darwin"* ]]; then
+      local STTYOPTS="$(stty -g)"
+    else
+      local STTYOPTS="$(stty --save)"
+    fi
     stty stop '' -ixoff
     command vim "$@"
     stty "$STTYOPTS"
