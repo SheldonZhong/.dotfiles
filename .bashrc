@@ -5,53 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-alias ls='ls --color=auto'
-alias la='ls --color=auto -A'
-alias ll='ls --color=auto -alFh'
-alias lt='ls --color=auto -ltrh'
-alias ldot='ls --color=auto -lhd .?*'
-
-alias grep='grep --color'
-alias fgrep='fgrep --color'
-alias egrep='egrep --color'
-
-alias ip='ip -color'
-
-alias diff='diff --color=auto'
-
-alias free='free -h'
-alias df='df -h'
-alias du='du -sh'
-
-alias remake='make -B'
-
-alias latexmk='latexmk -pdf'
-
-# better be careful
-alias rm='rm -i'
-
-alias watch='watch '
-
-alias sudo='sudo -E'
-alias hibernate='systemctl hibernate'
-
-alias config='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias onedrive='docker logs onedrive | tail -n 20'
-
-# tools
-alias valgrind='valgrind --leak-check=full --show-leak-kinds=all --track-origins=yes'
-
-alias wl-copy='wl-copy --trim-newline'
-alias wl-paste='wl-paste --no-newline'
-
-alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
-
-alias tags='ctags -R; gtags'
-
-alias glow='glow -p'
-
-# attach to debug port
-alias gda='sudo -H gdb -p'
+source ~/.alias
 
 export EDITOR=vim
 
