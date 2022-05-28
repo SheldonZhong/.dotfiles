@@ -64,7 +64,7 @@ if [ -f /usr/share/fzf/completion.bash ]; then
 fi
 
 if [ -f /usr/share/fzf/key-bindings.bash ]; then
-    source /usr/share/fzf/completion.bash
+    source /usr/share/fzf/key-bindings.bash
 fi
 
 export PATH="$HOME/.bin:$PATH"
