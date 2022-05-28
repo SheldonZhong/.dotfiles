@@ -24,31 +24,9 @@ vim()
     stty "$STTYOPTS"
 }
 
-# PS1='[\u@\h \W]\$ '
 export HISTCONTROL=ignoreboth:erasedups
 
-export GIT_PS1_SHOWDIRTYSTATE=1
-export GIT_PS1_SHOWUPSTREAM=verbose
-export GIT_PS1_DESCRIBE_STYLE=contains
-export GIT_PS1_SHOWCOLORHINTS=1
-source ~/.git-prompt.sh
-# export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
-
-function __nonzero_return() {
-  RETVAL=$?
-  [ $RETVAL -ne 0 ] && echo "[$RETVAL]"
-}
-
-__BLUE__=$(tput setaf 6)
-__BOLD__=$(tput bold)
-__GREEN__=$(tput setaf 2)
-__COLOR__OFF__=$(tput sgr0)
-__YELLOW__=$(tput setaf 3)
-__RED__=$(tput setaf 1)
-
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
-fi
+source ~/.prompt
 
 function custom_prompt() {
   __git_ps1 "${__BLUE__}[\\d \\t] ${__BOLD__}${__GREEN__}\\u@\\h${__COLOR__OFF__}${__BOLD__}:${__YELLOW__}\\w${__COLOR__OFF__}" "${__RED__}${__BOLD__}\`__nonzero_return\`${__COLOR__OFF__}\n\\$ "
@@ -57,6 +35,8 @@ function custom_prompt() {
   PS1="$PS1$VTE_PWD_THING"
 }
 
+# PS1='[\u@\h \W]\$ '
+# export PROMPT_COMMAND='__git_ps1 "\u@\h:\w" "\\\$ "'
 PROMPT_COMMAND=custom_prompt
 
 if [ -f /usr/share/fzf/completion.bash ]; then
