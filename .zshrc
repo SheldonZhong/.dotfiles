@@ -69,6 +69,8 @@ key[Control-Right]="${terminfo[kRIT5]}"
 
 bindkey "\e[1;5C" forward-word
 bindkey "\e[1;5D" backward-word
+bindkey "\e[1;3C" forward-word
+bindkey "\e[1;3D" backward-word
 
 # possible keys, use cat -v to capture
 # bindkey "\eOc" forward-word
