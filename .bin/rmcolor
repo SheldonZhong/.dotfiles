@@ -1,0 +1,16 @@
+#!/bin/bash
+if [[ $# -eq 0 ]]; then
+  echo "Usage:"
+  echo "  rmcolor <filename>"
+  exit 1
+fi
+
+for txt in "$@"; do
+  if [ ! -f ${txt} ]; then
+    echo "${txt} does not exist."
+    exit 1
+  fi
+
+  sed -e 's/\x1b\[[0-9;]*m//g' $txt > "${txt}_colorless"
+done
+
