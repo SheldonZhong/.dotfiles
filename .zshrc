@@ -14,6 +14,8 @@ autoload -Uz compinit
 compinit
 # End of lines added by compinstall
 
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+
 source ~/.alias
 
 source ~/.prompt
@@ -71,6 +73,8 @@ bindkey "\e[1;5C" forward-word
 bindkey "\e[1;5D" backward-word
 bindkey "\e[1;3C" forward-word
 bindkey "\e[1;3D" backward-word
+
+export PATH="$HOME/.bin:$PATH"
 
 # possible keys, use cat -v to capture
 # bindkey "\eOc" forward-word
