@@ -85,3 +85,5 @@ export PATH="$HOME/.bin:$PATH"
 # bindkey "\e[5D" backward-word
 # bindkey "\e\e[C" forward-word
 # bindkey "\e\e[D" backward-word
+
+source ~/.path

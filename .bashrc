@@ -47,8 +47,4 @@ if [ -f /usr/share/fzf/key-bindings.bash ]; then
     source /usr/share/fzf/key-bindings.bash
 fi
 
-export PATH="$HOME/.bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
-# Install Ruby Gems to ~/gems
-export GEM_HOME="$HOME/gems"
-export PATH="$HOME/gems/bin:$PATH"
+source ~/.path
