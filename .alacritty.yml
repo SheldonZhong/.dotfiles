@@ -18,8 +18,8 @@ window:
   # Specified in number of columns/lines, not pixels.
   # If both are `0`, this setting is ignored.
   dimensions:
-    columns: 80
-    lines: 24
+    columns: 120
+    lines: 40
 
   # Allow terminal applications to change Alacritty's window title.
   dynamic_title: true
@@ -52,7 +52,7 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background, but no title bar buttons
-  decorations: none
+  decorations: full
 
   # Startup Mode (changes require restart)
   #
@@ -235,7 +235,7 @@ font:
     family: Source Code Pro
 
     # The `style` can be specified to pick a specific face.
-    style: Source Code Pro
+    style: Regular
 
   # Bold font face
   bold:
@@ -271,7 +271,7 @@ font:
     style: Bold Italic
 
   # Point size
-  #size: 11.0
+  size: 12.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
@@ -584,6 +584,10 @@ key_bindings:
   #- { key: Q,      mods: Command,         action: Quit             }
   #- { key: W,      mods: Command,         action: Quit             }
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
+  - { key: J,       mods: Alt,             chars: "\x1bj"            }
+  - { key: K,       mods: Alt,             chars: "\x1bk"            }
+  - { key: H,       mods: Alt,             chars: "\x1bh"            }
+  - { key: L,       mods: Alt,             chars: "\x1bl"            }
 
   #- { key: Paste,                    action: Paste                            }
   #- { key: Copy,                     action: Copy                             }
