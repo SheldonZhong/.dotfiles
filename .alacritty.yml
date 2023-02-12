@@ -85,7 +85,7 @@ window:
   #
   # Override the variant of the GTK theme. Commonly supported values are `dark` and `light`.
   # Set this to `None` to use the default theme variant.
-  decorations_theme_variant: dark
+  decorations_theme_variant: Dark
 
 #scrolling:
   # Maximum number of lines in the scrollback buffer.
@@ -534,7 +534,7 @@ mouse:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
 key_bindings:
-  - { key: F11, action: ToggleFullscreen }
+  - { key: F11, action: ToggleSimpleFullscreen }
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
