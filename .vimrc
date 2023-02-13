@@ -57,6 +57,8 @@ set autoread
 set incsearch
 set linebreak
 
+set wildignore=*.o,*.ipynb,*.out
+
 " show search count
 set shortmess-=S
 
