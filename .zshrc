@@ -17,6 +17,8 @@ compinit
 
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
+set -o noclobber
+
 source ~/.alias
 
 source ~/.prompt

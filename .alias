@@ -24,6 +24,8 @@ alias latexmk='latexmk -pdf'
 
 # better be careful
 alias rm='rm -i'
+alias cp='cp -i'
+alias mv='mv -i'
 
 alias watch='watch '
 
