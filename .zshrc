@@ -89,4 +89,12 @@ export PATH="$HOME/.bin:$PATH"
 # bindkey "\e\e[C" forward-word
 # bindkey "\e\e[D" backward-word
 
+if [ -f /usr/share/fzf/completion.zsh ]; then
+  source /usr/share/fzf/completion.zsh
+fi
+
+if [ -f /usr/share/fzf/key-bindings.zsh ]; then
+  source /usr/share/fzf/key-bindings.zsh
+fi
+
 source ~/.path
