@@ -534,7 +534,6 @@ mouse:
 # If the same trigger is assigned to multiple actions, all of them are executed
 # at once.
 key_bindings:
-  - { key: F11, action: ToggleSimpleFullscreen }
   # (Windows, Linux, and BSD only)
   #- { key: V,        mods: Control|Shift, action: Paste            }
   #- { key: C,        mods: Control|Shift, action: Copy             }
@@ -562,7 +561,8 @@ key_bindings:
   #- { key: Q,      mods: Command,         action: Quit             }
   #- { key: W,      mods: Command,         action: Quit             }
   #- { key: F,      mods: Command|Control, action: ToggleFullscreen }
-  - { key: N,      mods: Command,          action: CreateNewWindow  }
+  - { key: Up,      mods: Command,         action: ToggleSimpleFullscreen }
+  - { key: N,       mods: Command,         action: CreateNewWindow  }
   - { key: J,       mods: Alt,             chars: "\x1bj"            }
   - { key: K,       mods: Alt,             chars: "\x1bk"            }
   - { key: H,       mods: Alt,             chars: "\x1bh"            }
