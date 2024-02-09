@@ -6,3 +6,7 @@
 [pull]
 	rebase = false
 	ff = only
+
+[alias]
+  ls = diff --name-status
+  la = status -s
