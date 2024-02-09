@@ -3,6 +3,8 @@ alias la='ls --color=auto -A'
 alias ll='ls --color=auto -alFh'
 alias lt='ls --color=auto -ltrh'
 alias ldot='ls --color=auto -lhd .?*'
+alias ldir='ls --color=auto -d */'
+alias lldir='ls --color=auto -ld */'
 
 alias lsblk='lsblk -o +MODEL,FSTYPE'
 
