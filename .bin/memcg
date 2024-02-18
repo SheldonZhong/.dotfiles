@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+
+msg_exit()
+{
+  echo "usage:"
+  echo "    create <cgname> <memsize>     # memsize: 3K, 5M, or 7G"
+  echo "    ls"
+  echo "    rm <cgname>"
+  echo "    edit <cgname>"
+  echo "    <cgname>            # start login-shell"
+  echo "    <cgname> [cmd ...]  # run command"
+  exit 0
+}
+
+case ${1} in
+create)
+  [[ $# -lt 3 ]] && msg_exit
+  mkdir -p ${HOME}/.config/systemd/user
+  printf "[Slice]\nMemoryMax=${3}\n" > ${HOME}/.config/systemd/user/${2}.slice
+  systemctl --user daemon-reload
+  # show file content
+  head ${HOME}/.config/systemd/user/${2}.slice
+  ;;
+
+rm)
+  [[ $# -lt 2 ]] && msg_exit
+  slicefn="${HOME}/.config/systemd/user/${2}.slice"
+  if [[ ! -f ${slicefn} ]]; then
+    echo "${slicefn} not found"
+  else
+    systemctl --user stop ${2}.slice
+    rm -f ${slicefn}
+    systemctl --user daemon-reload
+  fi
+  ;;
+
+ls)
+  head -v ${HOME}/.config/systemd/user/*.slice
+  ;;
+
+"")
+  head -v ${HOME}/.config/systemd/user/*.slice
+  msg_exit
+  ;;
+
+edit)
+  [[ $# -lt 2 ]] && msg_exit
+  slicefn="${HOME}/.config/systemd/user/${2}.slice"
+  if [[ ! -f ${slicefn} ]]; then
+    echo "${slicefn} not found"
+  else
+    ${EDITOR} ${HOME}/.config/systemd/user/${2}.slice
+    systemctl --user daemon-reload
+  fi
+  ;;
+
+*)
+  echo ${1}
+  [[ $# -lt 1 ]] && msg_exit
+  slicefn="${HOME}/.config/systemd/user/${1}.slice"
+  if [[ ! -f ${slicefn} ]]; then
+    echo "${slicefn} does not exist"
+    exit 0
+  fi
+  if [[ $# -lt 2 ]]; then
+    systemd-run --user --slice=${1}.slice --shell
+  else
+    systemd-run --user --slice=${1}.slice --pty "${@:2}"
+  fi
+  ;;
+
+esac
