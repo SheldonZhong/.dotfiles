@@ -97,4 +97,6 @@ if [ -f /usr/share/fzf/key-bindings.zsh ]; then
   source /usr/share/fzf/key-bindings.zsh
 fi
 
-source ~/.path
+source ~/.exports
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
