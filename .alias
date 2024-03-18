@@ -51,3 +51,5 @@ alias glow='glow -p'
 
 # attach to debug port
 alias gda='sudo -H gdb -p'
+
+alias pgrep='pgrep -fla'
