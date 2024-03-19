@@ -1,0 +1,17 @@
+#!/usr/bin/env -S awk -f
+
+BEGIN {
+  sum = 0;
+  nr = 0;
+}
+
+{
+  sum += $1
+  nr++
+}
+
+END {
+  print "sum: " sum;
+  if (nr > 0)
+    print "avg: " sum / nr;
+}
