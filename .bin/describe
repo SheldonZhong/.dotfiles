@@ -2,16 +2,15 @@
 
 BEGIN {
   sum = 0;
-  nr = 0;
 }
 
 {
   sum += $1
-  nr++
 }
 
 END {
-  print "sum: " sum;
-  if (nr > 0)
-    print "avg: " sum / nr;
+  printf("sum: %d\n", sum);
+  printf("nr: %d\n", NR);
+  if (NR > 0)
+    printf("avg: %f\n", sum / NR);
 }
