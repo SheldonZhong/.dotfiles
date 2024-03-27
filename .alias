@@ -7,6 +7,7 @@ alias ldir='ls --color=auto -d */'
 alias lldir='ls --color=auto -ld */'
 
 alias lsblk='lsblk -o +MODEL,FSTYPE'
+alias lfd='ls --color=auto -alFh /proc/$$/fd'
 
 alias grep='grep --color'
 alias fgrep='fgrep --color'
