@@ -19,3 +19,14 @@ __RED__=$(tput setaf 1)
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
   source /etc/profile.d/vte.sh
 fi
+
+check_config_update() {
+  git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME remote update
+
+  if [ $(git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME rev-parse HEAD) != $(git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME rev-parse @{u}) ]; then
+    echo dotfile config is different from remote
+    git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME status
+  fi
+}
+
+(check_config_update &)
