@@ -53,3 +53,5 @@ alias glow='glow -p'
 alias gda='sudo -H gdb -p'
 
 alias pgrep='pgrep -fla'
+
+alias rcp='rsync --progress --recursive --copy-links'
