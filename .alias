@@ -55,4 +55,4 @@ alias gda='sudo -H gdb -p'
 
 alias pgrep='pgrep -fla'
 
-alias rcp='rsync --progress --recursive --copy-links'
+alias rsyncp='rsync --progress --recursive --copy-links'
