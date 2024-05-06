@@ -6,7 +6,7 @@ alias ldot='ls --color=auto -lhd .?*'
 alias ldir='ls --color=auto -d */'
 alias lldir='ls --color=auto -ld */'
 
-alias lsblk='lsblk -o +MODEL,FSTYPE'
+alias lsblk='lsblk -o +MODEL,FSTYPE,FSUSED,FSUSE%,FSSIZE'
 alias lfd='ls --color=auto -alFh /proc/$$/fd'
 
 alias grep='grep --color'
