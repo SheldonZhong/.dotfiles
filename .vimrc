@@ -134,3 +134,7 @@ nnoremap <silent> <C-S> :<C-u>Update<CR>
 inoremap <C-S> <ESC>:<C-u>Update<CR>
 
 set clipboard^=unnamed,unnamedplus
+
+if &diff
+  colorscheme elflord
+endif

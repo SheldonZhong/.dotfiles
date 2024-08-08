@@ -1,12 +1,17 @@
 [user]
-	email = wzhong20@uic.edu
-	name = Wenshao Zhong
+  email = wzhong20@uic.edu
+  name = Wenshao Zhong
 [core]
-	editor = vim
+  editor = vim
 [pull]
-	rebase = false
-	ff = only
+  rebase = false
+  ff = only
+[diff]
+  tool = vimdiff
 
 [alias]
   ls = diff --name-status
   la = status -s
+
+[commit]
+  gpgsign = true
