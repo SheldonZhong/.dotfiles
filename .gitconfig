@@ -12,6 +12,7 @@
 [alias]
   ls = diff --name-status
   la = status -s
+  blt = branch --sort=committerdate
 
 [commit]
   gpgsign = true
