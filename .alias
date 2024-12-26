@@ -56,3 +56,5 @@ alias gda='sudo -H gdb -p'
 alias pgrep='pgrep -fla'
 
 alias rsyncp='rsync --progress --recursive --copy-links'
+
+alias :e='vim'
