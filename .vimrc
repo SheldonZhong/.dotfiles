@@ -26,6 +26,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'lervag/vimtex'
 Plugin 'JamshedVesuna/vim-markdown-preview'
+Plugin 'ap/vim-css-color'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
