@@ -4,3 +4,6 @@ export PATH="$HOME/.local/bin:$PATH"
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
 export GPG_TTY=$(tty)
+if [ -x "$(command -v brew)" ]; then
+  export PATH=$(brew --prefix python)/libexec/bin:$PATH
+fi
